@@ -7,35 +7,33 @@
 
 using System;
 
-namespace Practica3e4
+class Program
 {
-    class Program
+    //Estructura principal del programa.
+    static void Main(string[] args)
     {
-        //Estructura principal del programa.
-        static void Main(string[] args)
+        double Numero;
+        try
         {
-            double Numero;
-            try
-            {
-                Console.Write("DUPLICADOR DE NÚMERO\n\nDigite un número: ");
-                Numero = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("\nDuplicado : {0} ", Duplicador(Numero));
-                Console.ReadKey();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error : " + e.Message.ToString());
-                Console.ReadKey();
-            }
+            Console.Write("DUPLICADOR DE NÚMERO\n\nDigite un número: ");
+            Numero = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("\nDuplicado : {0} ", Duplicador(Numero));
+            Console.ReadKey();
         }
-
-        //Método de duplicación de números.
-        static double Duplicador(double Numero)
+        catch (Exception e)
         {
-            double _Total;
-            _Total = Numero * 2;
-            return _Total;
+            Console.WriteLine("Error : " + e.Message.ToString());
+            Console.ReadKey();
         }
-
     }
+
+    //Método de duplicación de números.
+    static double Duplicador(double Numero)
+    {
+        double _Total;
+        _Total = Numero * 2;
+        return _Total;
+    }
+
 }
+
